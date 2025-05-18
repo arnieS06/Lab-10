@@ -15,14 +15,12 @@ public class WordCountAnalyzer extends TextAnalyzer {
     public void analyze() {
         Scanner s = new Scanner(getText());
         int wordCount = 0;
-        //Hello world!
-        for (int i = 0; i < getText().length(); i++) {
-            if (s.hasNext()) {
-                wordCount++;
-            }
+
+        while (s.hasNext()) { // assuming hasNext starts at the first token
+            s.next();
+            wordCount++;
         }
-
-
+        results = wordCount;
 
     }
 
